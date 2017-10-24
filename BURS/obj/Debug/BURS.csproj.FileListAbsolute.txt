@@ -1,0 +1,204 @@
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\bin\Debug\BURS.exe.config
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\bin\Debug\BURS.exe
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\bin\Debug\BURS.pdb
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\bin\Debug\SourceGrid.dll
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\bin\Debug\SourceGrid.xml
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\obj\Debug\BURS.exe
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\obj\Debug\BURS.RefinementForm.resources
+C:\Users\Timerkhan-PC\Documents\Visual Studio 2015\Projects\BURS\BURS\obj\Debug\BURS.MainForm.resources
+C:\Users\smart\Desktop\BURS\BURS\bin\Debug\BURS.exe.config
+C:\Users\smart\Desktop\BURS\BURS\obj\Debug\BURS.exe
+C:\Users\smart\Desktop\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\smart\Desktop\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+C:\Users\smart\Desktop\BURS\BURS\obj\Debug\BURS.RefinementForm.resources
+C:\Users\smart\Desktop\BURS\BURS\obj\Debug\BURS.MainForm.resources
+C:\Users\smart\Desktop\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+C:\Users\smart\Desktop\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\smart\Desktop\BURS\BURS\bin\Debug\BURS.exe
+C:\Users\smart\Desktop\BURS\BURS\bin\Debug\BURS.pdb
+C:\Users\smart\Desktop\BURS\BURS\bin\Debug\SourceGrid.dll
+C:\Users\smart\Desktop\BURS\BURS\bin\Debug\SourceGrid.xml
+C:\BURS V@\BURS\BURS\bin\Debug\BURS.exe.config
+C:\BURS V@\BURS\BURS\obj\Debug\BURS.exe
+C:\BURS V@\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\bin\Debug\BURS.exe.config
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.exe
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\bin\Debug\BURS.exe
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\bin\Debug\BURS.pdb
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\bin\Debug\SourceGrid.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\bin\Debug\SourceGrid.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.RefinementForm.resources
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.MainForm.resources
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\bin\Debug\BURS.exe.config
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.exe
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.RefinementForm.resources
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.MainForm.resources
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\bin\Debug\BURS.exe
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\bin\Debug\BURS.pdb
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\bin\Debug\SourceGrid.dll
+C:\Users\Нуруллин Максим\Desktop\BURS V2\BURS\BURS\bin\Debug\SourceGrid.xml
+G:\Новая папка\BURS V2\BURS\BURS\bin\Debug\BURS.exe.config
+G:\Новая папка\BURS V2\BURS\BURS\obj\Debug\BURS.exe
+G:\Новая папка\BURS V2\BURS\BURS\obj\Debug\BURS.pdb
+G:\Новая папка\BURS V2\BURS\BURS\bin\Debug\BURS.exe
+G:\Новая папка\BURS V2\BURS\BURS\bin\Debug\BURS.pdb
+G:\Новая папка\BURS V2\BURS\BURS\bin\Debug\SourceGrid.dll
+G:\Новая папка\BURS V2\BURS\BURS\bin\Debug\SourceGrid.xml
+G:\Новая папка\BURS V2\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+G:\Новая папка\BURS V2\BURS\BURS\obj\Debug\BURS.RefinementForm.resources
+G:\Новая папка\BURS V2\BURS\BURS\obj\Debug\BURS.MainForm.resources
+G:\Новая папка\BURS V2\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+G:\Новая папка\BURS V2\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\BURS.exe.config
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.exe
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.RefinementForm.resources
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.MainForm.resources
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\BURS.exe
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\BURS.pdb
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\SourceGrid.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\SourceGrid.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Collections.Immutable.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.AttributedModel.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Convention.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Hosting.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Runtime.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.TypedParts.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Engine.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Collections.Immutable.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.AttributedModel.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Convention.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Hosting.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Runtime.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.TypedParts.xml
+C:\Users\smart\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\BURS.exe.config
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.exe
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\BURS.exe
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\BURS.pdb
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\SourceGrid.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.AttributedModel.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Convention.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Hosting.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Runtime.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.TypedParts.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Engine.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\SourceGrid.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.AttributedModel.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Convention.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Hosting.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.Runtime.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Composition.TypedParts.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.RefinementForm.resources
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.MainForm.resources
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+C:\Users\Timerkhan-PC\Desktop\BURS V2\BURS V2\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\BURS.exe.config
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\obj\Debug\BURS.exe
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\obj\Debug\BURS.pdb
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\BURS.exe
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\BURS.pdb
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\SourceGrid.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Collections.Immutable.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.AttributedModel.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.Convention.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.Hosting.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.Runtime.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.TypedParts.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.Build.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.Build.Engine.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\SourceGrid.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Collections.Immutable.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.AttributedModel.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.Convention.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.Hosting.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.Runtime.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Composition.TypedParts.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\obj\Debug\BURS.csprojResolveAssemblyReference.cache
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\obj\Debug\BURS.MainForm.resources
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\obj\Debug\BURS.Properties.Resources.resources
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\obj\Debug\BURS.csproj.GenerateResource.Cache
+C:\Users\smart\Desktop\BURS V3\BURS\BURS\obj\Debug\BURS.ClarifyForm.resources
