@@ -54,7 +54,6 @@ namespace SplittingAlgorithm
                     serv.DeptSize = dataGridView1.Rows[i].Cells["Column3"].Value == null ? 0 : int.Parse(dataGridView1.Rows[i].Cells["Column3"].Value.ToString());
                     serv.ProportionCurrentCharges = dataGridView1.Rows[i].Cells["Column6"].Value == null ? 0 : double.Parse(dataGridView1.Rows[i].Cells["Column6"].Value.ToString());
                     serv.ProportionDept = dataGridView1.Rows[i].Cells["Column4"].Value == null ? 0 : double.Parse(dataGridView1.Rows[i].Cells["Column4"].Value.ToString());
-                    serv.ProportionFine = dataGridView1.Rows[i].Cells["Column13"].Value == null ? 0 : double.Parse(dataGridView1.Rows[i].Cells["Column13"].Value.ToString());
                     serv.IsExcluded = false;
                     prov.Services.Add(serv);
                     _provs.Add(prov);
