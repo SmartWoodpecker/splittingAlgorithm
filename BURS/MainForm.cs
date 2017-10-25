@@ -66,6 +66,16 @@ namespace SplittingAlgorithm
                 }
             }
 
+            // подсчет итоговых сумм
+            int sumCharge=0, sumDep=0, sumFine=0, sumResult;
+            sumCharge = _provs.Sum(p => p.Services.Sum(o => o.CurrentChargesSize));
+            sumDep = _provs.Sum(p => p.Services.Sum(o => o.DeptSize));
+            sumFine = _provs.Sum(p => p.Services.Sum(o => o.Fine));
+            sumResult = sumCharge + sumDep + sumFine;
+
+            dataGridView2.Rows[0].Cells["Column11"].Value = sumDep;
+            dataGridView2.Rows[0].Cells["Column13"].Value = sumCharge;
+            dataGridView2.Rows[0].Cells["Column14"].Value = sumResult;
             // используя LINQ объединяем поставщиков с одинаковым именем
             _provs = _provs
                 .GroupBy(o => o.Name)
@@ -154,7 +164,7 @@ namespace SplittingAlgorithm
                     }
 
                     // b.1
-                    algorithm2(provList);
+                    Algorithm2(provList);
                     // b.1 - конец
 
                     // b.2 - начало
@@ -162,7 +172,7 @@ namespace SplittingAlgorithm
                     {
 
                         var activeProvList = provList.Where(prov => prov.IsInactive).ToList();
-                        algorithm3(activeProvList); //для действующих поставщиков
+                        Algorithm3(activeProvList); //для действующих поставщиков
                         JoinLists(activeProvList, provList);
                         // b.2 - конец
 
@@ -170,14 +180,14 @@ namespace SplittingAlgorithm
                         if (_payment > 0)
                         {
                             var inactiveProvList = provList.Where(qa => !qa.IsInactive).ToList();
-                            algorithm3(inactiveProvList); //для недействующих поставщиков
+                            Algorithm3(inactiveProvList); //для недействующих поставщиков
                             JoinLists(inactiveProvList, provList);
                             // b.3 - конец
 
                             // b.4 - начало
                             if (_payment > 0)
                             {
-                                algorithm5(provList); // расщепление переплаты
+                                Algorithm5(provList); // расщепление переплаты
                                                       // b.4 - конец
                             }
                             else
@@ -233,7 +243,7 @@ namespace SplittingAlgorithm
                 })
                                 .ToList();
 
-            algorithm2(provsOfUtilitiesList);
+            Algorithm2(provsOfUtilitiesList);
             JoinLists(provsOfUtilitiesList, _provs);
             if (_payment == 0)
             {
@@ -257,7 +267,7 @@ namespace SplittingAlgorithm
             }
 
 
-            algorithm2(provsOfOverhaulList);
+            Algorithm2(provsOfOverhaulList);
             JoinLists(provsOfOverhaulList, _provs);
 
             if (_payment == 0)
@@ -268,7 +278,7 @@ namespace SplittingAlgorithm
 
             //Пункт 5 
             var provsOfActiveUtilitiesList = provsOfUtilitiesList.Where(p => !p.IsInactive).ToList();
-            algorithm3(provsOfActiveUtilitiesList);
+            Algorithm3(provsOfActiveUtilitiesList);
             JoinLists(provsOfActiveUtilitiesList, provsOfUtilitiesList);
 
             if (_payment == 0)
@@ -280,7 +290,7 @@ namespace SplittingAlgorithm
 
             //Пункт 6
             var provsOfInactiveUtilitiesList = provsOfUtilitiesList.Where(p => p.IsInactive).ToList();
-            algorithm3(provsOfInactiveUtilitiesList);
+            Algorithm3(provsOfInactiveUtilitiesList);
             JoinLists(provsOfInactiveUtilitiesList, provsOfUtilitiesList);
 
 
@@ -294,7 +304,7 @@ namespace SplittingAlgorithm
 
             //Пункт 7
             var provsOfActiveOverhaulList = provsOfOverhaulList.Where(p => !p.IsInactive).ToList();
-            algorithm3(provsOfActiveOverhaulList);
+            Algorithm3(provsOfActiveOverhaulList);
             JoinLists(provsOfActiveOverhaulList, provsOfOverhaulList);
 
             if (_payment == 0)
@@ -307,7 +317,7 @@ namespace SplittingAlgorithm
 
             //Пункт 8
             var provsOfInactiveOverhaulListl = provsOfOverhaulList.Where(p => p.IsInactive).ToList();
-            algorithm3(provsOfInactiveOverhaulListl);
+            Algorithm3(provsOfInactiveOverhaulListl);
             JoinLists(provsOfInactiveOverhaulListl, provsOfOverhaulList);
 
             if (_payment == 0)
@@ -319,7 +329,7 @@ namespace SplittingAlgorithm
             //
 
             //Пункт 9
-            algorithm4(provsOfActiveUtilitiesList);
+            Algorithm4(provsOfActiveUtilitiesList);
             JoinLists(provsOfActiveUtilitiesList, provsOfUtilitiesList);
             if (_payment == 0)
             {
@@ -330,7 +340,7 @@ namespace SplittingAlgorithm
             //
 
             //Пункт 10
-            algorithm4(provsOfInactiveUtilitiesList);
+            Algorithm4(provsOfInactiveUtilitiesList);
             JoinLists(provsOfInactiveUtilitiesList, provsOfUtilitiesList);
             if (_payment == 0)
             {
@@ -341,7 +351,7 @@ namespace SplittingAlgorithm
             //
 
             //Пункт 11
-            algorithm4(provsOfActiveOverhaulList);
+            Algorithm4(provsOfActiveOverhaulList);
             JoinLists(provsOfActiveOverhaulList, provsOfOverhaulList);
             if (_payment == 0)
             {
@@ -352,7 +362,7 @@ namespace SplittingAlgorithm
             //
 
             //Пункт 12
-            algorithm4(provsOfInactiveOverhaulListl);
+            Algorithm4(provsOfInactiveOverhaulListl);
             JoinLists(provsOfInactiveOverhaulListl, provsOfOverhaulList);
             if (_payment == 0)
             {
@@ -376,7 +386,7 @@ namespace SplittingAlgorithm
                  })
                                  .ToList();*/
 
-            algorithm5(_provs);
+            Algorithm5(_provs);
 
             //
 
@@ -420,7 +430,7 @@ namespace SplittingAlgorithm
         /// </summary>
         /// <param name="C"></param> Остаток оплаты
         /// <param name="provs"></param>
-        private void algorithm2(List<Provider> provs)
+        private void Algorithm2(List<Provider> provs)
         {
             int sumP = 0;
             int n = provs.Count();
@@ -495,7 +505,7 @@ namespace SplittingAlgorithm
         /// </summary>
         /// <param name="C"></param>
         /// <param name="provs"></param>
-        private void algorithm3(List<Provider> provs)
+        private void Algorithm3(List<Provider> provs)
         {
             int sumP = 0;
             int C = _payment;
@@ -555,7 +565,7 @@ namespace SplittingAlgorithm
         /// </summary>
         /// <param name="C"></param>
         /// <param name="provs"></param>
-        private void algorithm4(List<Provider> provs)
+        private void Algorithm4(List<Provider> provs)
         {
             int sumFine = 0;
             int sumP = 0;
@@ -621,7 +631,7 @@ namespace SplittingAlgorithm
         /// </summary>
         /// <param name="C"></param>
         /// <param name="provs"></param>
-        private void algorithm5(List<Provider> provs)
+        private void Algorithm5(List<Provider> provs)
         {
             int C = _payment;
             int sumP = 0;
@@ -724,6 +734,7 @@ namespace SplittingAlgorithm
         private void exampleNumber_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
             string strNumber = exampleNumber.SelectedItem.ToString();
             int number = int.Parse(strNumber);
 
@@ -795,7 +806,7 @@ namespace SplittingAlgorithm
                     row1.Cells[0].Value = "ПУ 1";
                     row1.Cells[1].Value = ServiceEnum.Service1.ToString();
                     row1.Cells[2].Value = 100;
-                    row1.Cells[10].Value = true;
+                    row1.Cells[9].Value = true;
                     dataGridView1.Rows.Add(row1);
 
                     row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
@@ -813,7 +824,7 @@ namespace SplittingAlgorithm
 
                     row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row4.Cells[0].Value = "ПУ 3";
-                    row4.Cells[10].Value = true;
+                    row4.Cells[9].Value = true;
                     row4.Cells[1].Value = ServiceEnum.Service2.ToString();
                     row4.Cells[2].Value = 150;
                     dataGridView1.Rows.Add(row4);
@@ -845,7 +856,7 @@ namespace SplittingAlgorithm
                     row1.Cells[0].Value = "ПУ 1";
                     row1.Cells[1].Value = ServiceEnum.Service1.ToString();
                     row1.Cells[2].Value = 100;
-                    row1.Cells[10].Value = true;
+                    row1.Cells[9].Value = true;
                     dataGridView1.Rows.Add(row1);
 
                     row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
@@ -863,7 +874,7 @@ namespace SplittingAlgorithm
 
                     row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row4.Cells[0].Value = "ПУ 3";
-                    row4.Cells[10].Value = true;
+                    row4.Cells[9].Value = true;
                     row4.Cells[1].Value = ServiceEnum.Service2.ToString();
                     row4.Cells[2].Value = 150;
                     dataGridView1.Rows.Add(row4);
@@ -894,7 +905,7 @@ namespace SplittingAlgorithm
                     row18.Cells[0].Value = "ПУ 1";
                     row18.Cells[1].Value = ServiceEnum.Service1.ToString();
                     row18.Cells[2].Value = 100;
-                    row18.Cells[10].Value = true;
+                    row18.Cells[9].Value = true;
                     dataGridView1.Rows.Add(row18);
 
                     DataGridViewRow row19 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
@@ -912,7 +923,7 @@ namespace SplittingAlgorithm
 
                     DataGridViewRow row21 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row21.Cells[0].Value = "ПУ 3";
-                    row21.Cells[10].Value = true;
+                    row21.Cells[9].Value = true;
                     row21.Cells[1].Value = ServiceEnum.Service2.ToString();
                     row21.Cells[2].Value = 150;
                     dataGridView1.Rows.Add(row21);

@@ -15,7 +15,6 @@ namespace SplittingAlgorithm.Models
         /// </summary>
         public List<Service> Services { get; set; }
 
-
         /// <summary>
         /// Активность поставщика
         /// </summary>

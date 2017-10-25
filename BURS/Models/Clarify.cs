@@ -8,12 +8,21 @@ using System.Threading.Tasks;
 namespace SplittingAlgorithm.Models
 {
     /// <summary>
-    /// Объект Уточнение
+    /// Уточнения
     /// </summary>
     public class Clarify
     {
+        /// <summary>
+        /// Имя поставщика
+        /// </summary>
         public string ProviderName { get; set; }
+        /// <summary>
+        /// Название услуги
+        /// </summary>
         public ServiceEnum ServiceName { get; set; }
+        /// <summary>
+        /// Внесенная оплата
+        /// </summary>
         public int Count { get; set; }
 
     }
