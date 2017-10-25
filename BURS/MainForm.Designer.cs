@@ -46,6 +46,8 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,8 +55,8 @@
             // 
             // сalculate
             // 
-            this.сalculate.Location = new System.Drawing.Point(11, 49);
-            this.сalculate.Margin = new System.Windows.Forms.Padding(2);
+            this.сalculate.Location = new System.Drawing.Point(11, 87);
+            this.сalculate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.сalculate.Name = "сalculate";
             this.сalculate.Size = new System.Drawing.Size(176, 36);
             this.сalculate.TabIndex = 1;
@@ -64,8 +66,8 @@
             // 
             // clarify
             // 
-            this.clarify.Location = new System.Drawing.Point(11, 12);
-            this.clarify.Margin = new System.Windows.Forms.Padding(2);
+            this.clarify.Location = new System.Drawing.Point(11, 50);
+            this.clarify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clarify.Name = "clarify";
             this.clarify.Size = new System.Drawing.Size(176, 33);
             this.clarify.TabIndex = 2;
@@ -75,20 +77,22 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.exampleNumber);
             this.panel2.Controls.Add(this.clarify);
             this.panel2.Controls.Add(this.сalculate);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 445);
+            this.panel2.Location = new System.Drawing.Point(0, 462);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(849, 91);
+            this.panel2.Size = new System.Drawing.Size(1143, 130);
             this.panel2.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(250, 17);
+            this.label1.Location = new System.Drawing.Point(280, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 13);
             this.label1.TabIndex = 5;
@@ -99,8 +103,13 @@
             this.exampleNumber.FormattingEnabled = true;
             this.exampleNumber.Items.AddRange(new object[] {
             "1",
-            "2"});
-            this.exampleNumber.Location = new System.Drawing.Point(388, 12);
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.exampleNumber.Location = new System.Drawing.Point(418, 8);
             this.exampleNumber.Name = "exampleNumber";
             this.exampleNumber.Size = new System.Drawing.Size(60, 21);
             this.exampleNumber.TabIndex = 4;
@@ -112,7 +121,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(849, 445);
+            this.panel1.Size = new System.Drawing.Size(1143, 462);
             this.panel1.TabIndex = 6;
             // 
             // dataGridView1
@@ -132,10 +141,10 @@
             this.Column12});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(849, 445);
+            this.dataGridView1.Size = new System.Drawing.Size(1143, 462);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
@@ -209,14 +218,30 @@
             this.Column12.HeaderText = "Недействующий поставщик";
             this.Column12.Name = "Column12";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Сумма оплаты";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 536);
+            this.ClientSize = new System.Drawing.Size(1143, 592);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -247,6 +272,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column12;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

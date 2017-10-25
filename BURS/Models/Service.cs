@@ -50,6 +50,10 @@ namespace SplittingAlgorithm.Models
         /// </summary>
         public int Fine { get; set; }
         /// <summary>
+        /// Задано ли пени
+        /// </summary>
+        public bool IsFine { get; set; }
+        /// <summary>
         /// Доля пени
         /// </summary>
         public double ProportionFine { get; set; }

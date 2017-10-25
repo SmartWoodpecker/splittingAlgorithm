@@ -35,7 +35,7 @@ namespace SplittingAlgorithm
         private void сalculate_Click(object sender, EventArgs e)
         {
             _provs = new List<Provider>();
-
+            _payment = int.Parse(textBox1.Text);
             for (int i = 0; dataGridView1.Rows.Count - 1 > i; i++)
             {
                 Provider prov = new Provider();
@@ -55,12 +55,14 @@ namespace SplittingAlgorithm
                     serv.ProportionCurrentCharges = dataGridView1.Rows[i].Cells["Column6"].Value == null ? 0 : double.Parse(dataGridView1.Rows[i].Cells["Column6"].Value.ToString());
                     serv.ProportionDept = dataGridView1.Rows[i].Cells["Column4"].Value == null ? 0 : double.Parse(dataGridView1.Rows[i].Cells["Column4"].Value.ToString());
                     serv.IsExcluded = false;
+                    serv.IsFine = false;
                     prov.Services.Add(serv);
                     _provs.Add(prov);
                 }
                 else
                 {
                     _provs.LastOrDefault().Services.LastOrDefault().Fine = serv.SummPay;
+                    _provs.LastOrDefault().Services.LastOrDefault().IsFine = true;
                 }
             }
 
@@ -362,19 +364,19 @@ namespace SplittingAlgorithm
             //
 
             // Пункт 13
-            var provsOfFirstMounthList = _provs
-                .Select(p => new Provider()
-                {
-                    IsInactive = p.IsInactive,
-                    Name = p.Name,
-                    Services = p.Services
-                                    .Where(o => o.DeptSize > 0
-                                    )
-                                    .ToList()
-                })
-                                .ToList();
+            /* var provsOfFirstMounthList = _provs
+                 .Select(p => new Provider()
+                 {
+                     IsInactive = p.IsInactive,
+                     Name = p.Name,
+                     Services = p.Services
+                                     .Where(o => o.DeptSize > 0
+                                     )
+                                     .ToList()
+                 })
+                                 .ToList();*/
 
-            algorithm5(provsOfFirstMounthList);
+            algorithm5(_provs);
 
             //
 
@@ -454,7 +456,7 @@ namespace SplittingAlgorithm
                         Service service = provider.Services[j];
                         if (!service.IsExcluded)
                         {
-                            service.SumSplitting = service.SummPay;
+                            service.SumSplitting += service.CurrentChargesSize;
                         }
                     }
                 }
@@ -498,16 +500,9 @@ namespace SplittingAlgorithm
             int sumP = 0;
             int C = _payment;
             int A = provs.Sum(o => o.Services.Sum(p => p.DeptSize));
-      
-            foreach (Provider provider in provs)
-            {
 
-                for (int j = 0; provider.Services.Count > j; j++)
-                {
-                    Service service = provider.Services[j];
-                    if (service.DeptSize < 0) { service.IsExcluded = true; }
-                }
-            }
+            int sumP1 = provs.Sum(o => o.Services.Sum(p => p.SumSplitting)); //СЕЙЧАС
+
 
             if (A <= C)
             {
@@ -518,13 +513,13 @@ namespace SplittingAlgorithm
                     {
                         if (!provider.Services[j].IsExcluded)
                         {
+
                             Service service = provider.Services[j];
-                            service.SumSplitting = service.DeptSize;
+                            service.SumSplitting += service.DeptSize;
                         }
                     }
                 }
             }
-
             else if (A > C)
             {
                 foreach (Provider provider in provs)
@@ -535,13 +530,23 @@ namespace SplittingAlgorithm
                         if (!provider.Services[j].IsExcluded)
                         {
                             Service service = provider.Services[j];
-                            service.SumSplitting = (int)(C * service.ProportionDept);
+                            service.SumSplitting += (int)(C * service.ProportionDept);
                         }
                     }
                 }
             }
-            sumP = provs.Sum(o => o.Services.Sum(p => p.SumSplitting));
+            foreach (Provider provider in provs)
+            {
 
+                for (int j = 0; provider.Services.Count > j; j++)
+                {
+                    Service service = provider.Services[j];
+                    if (service.DeptSize < 0) { service.IsExcluded = true; }
+                }
+            }
+
+            // sumP = provs.Sum(o => o.Services.Sum(p => p.SumSplitting))-sumP1;
+            sumP = A;
             _payment = C - sumP;
         }
 
@@ -566,7 +571,7 @@ namespace SplittingAlgorithm
                     Service service = provider.Services[j];
                     if (!service.IsExcluded)
                     {
-                        if (service.Fine <= 0) { service.IsExcluded = true; }
+                        if (service.Fine <= 0 && service.IsFine) { service.IsExcluded = true; }
                     }
 
                 }
@@ -576,25 +581,14 @@ namespace SplittingAlgorithm
             {
                 foreach (Service service in provider.Services)
                 {
-                    if (!service.IsExcluded)
+                    if (service.Fine > 0 && service.IsFine)
                         sumFine += service.Fine;
                 }
             }
 
             if (sumFine <= C)
             {
-                foreach (Provider provider in provs)
-                {
 
-                    for (int j = 0; provider.Services.Count > j; j++)
-                    {
-                        Service service = provider.Services[j];
-                        if (!service.IsExcluded)
-                        {
-                            service.SumSplitting = service.DeptSize;
-                        }
-                    }
-                }
             }
             else if (sumFine > C)
             {
@@ -604,10 +598,8 @@ namespace SplittingAlgorithm
                     for (int j = 0; provider.Services.Count > j; j++)
                     {
                         Service service = provider.Services[j];
-                        if (!service.IsExcluded)
-                            service.SumSplitting = (int)(C * Math.Round((double)service.Fine / (double)A, 1));
-                        else
-                            continue;
+                        if (service.Fine > 0 && service.IsFine)
+                            service.Fine = (int)(C * Math.Round((double)service.Fine / (double)A, 3));
                     }
                 }
             }
@@ -616,8 +608,8 @@ namespace SplittingAlgorithm
             {
                 foreach (Service service in provider.Services)
                 {
-                    if (!service.IsExcluded)
-                        sumP += service.SumSplitting;
+                    if (service.Fine > 0 && service.IsFine)
+                        sumP += service.Fine;
                 }
             }
 
@@ -641,7 +633,10 @@ namespace SplittingAlgorithm
                     Service service = provider.Services[j];
                     if (!service.IsExcluded)
                     {
-                        if (service.ProportionCurrentCharges <= 0) { service.IsExcluded = true; }
+                        if (service.CurrentChargesSize <= 0)
+                        {
+                            service.IsExcluded = true;
+                        }
                     }
                 }
 
@@ -652,19 +647,12 @@ namespace SplittingAlgorithm
                 for (int j = 0; provider.Services.Count > j; j++)
                 {
                     Service service = provider.Services[j];
-                    if (!service.IsExcluded)
-                        service.SumSplitting = (int)(C * service.ProportionFine);
-                    else
-                        continue;
-                }
-            }
-
-            foreach (Provider provider in provs)
-            {
-                foreach (Service service in provider.Services)
-                {
-                    if (!service.IsExcluded)
-                        sumP += service.SumSplitting;
+                    if (!service.IsExcluded || service.DeptSize < 0)
+                    {
+                        int a = (int)(C * service.ProportionCurrentCharges);
+                        service.SumSplitting += a;
+                        sumP += a;
+                    }
                 }
             }
 
@@ -696,7 +684,7 @@ namespace SplittingAlgorithm
                 {
                     var cell = dataGridView1.Rows[i].Cells[e.ColumnIndex].Value;
                     double a = cell == null ? 0 : double.Parse(cell.ToString());
-                    dataGridView1.Rows[i].Cells[e.ColumnIndex + 1].Value = Math.Round((a / summ), 1);
+                    dataGridView1.Rows[i].Cells[e.ColumnIndex + 1].Value = Math.Round((a / summ), 3);
                 }
             }
         }
@@ -927,7 +915,6 @@ namespace SplittingAlgorithm
                     row21.Cells[10].Value = true;
                     row21.Cells[1].Value = ServiceEnum.Service2.ToString();
                     row21.Cells[2].Value = 150;
-                    row21.Cells[4].Value = 150;
                     dataGridView1.Rows.Add(row21);
 
                     DataGridViewRow row22 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
@@ -947,7 +934,7 @@ namespace SplittingAlgorithm
                     DataGridViewRow row24 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row24.Cells[0].Value = "ПУ 4";
                     row24.Cells[1].Value = ServiceEnum.Peni.ToString();
-                    row24.Cells[7].Value = 130;
+                    row24.Cells[6].Value = 130;
                     dataGridView1.Rows.Add(row24);
                     break;
                 case 6:
@@ -986,44 +973,319 @@ namespace SplittingAlgorithm
                     dataGridView1.Rows.Add(row5);
                     break;
                 case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
+                    _payment = 6000;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row1.Cells[0].Value = "ПУ 1";
                     row1.Cells[1].Value = ServiceEnum.Service1.ToString();
                     row1.Cells[2].Value = 300;
                     row1.Cells[4].Value = 1500;
                     dataGridView1.Rows.Add(row1);
 
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row2.Cells[0].Value = "ПУ 1";
                     row2.Cells[1].Value = ServiceEnum.Peni.ToString();
                     row2.Cells[6].Value = 100;
                     dataGridView1.Rows.Add(row2);
 
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row3.Cells[0].Value = "ПУ 2";
                     row3.Cells[1].Value = ServiceEnum.Service2.ToString();
                     row3.Cells[2].Value = 500;
                     row3.Cells[4].Value = 900;
                     dataGridView1.Rows.Add(row3);
 
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row4.Cells[0].Value = "ПУ 2";
                     row4.Cells[1].Value = ServiceEnum.Service3.ToString();
                     row4.Cells[2].Value = -200;
                     row4.Cells[4].Value = 600;
                     dataGridView1.Rows.Add(row4);
 
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                     row5.Cells[0].Value = "ПУ 2";
                     row5.Cells[1].Value = ServiceEnum.Peni.ToString();
                     row5.Cells[6].Value = 100;
-                    dataGridView1.Rows.Add(row10);
+                    dataGridView1.Rows.Add(row5);
+                    break;
+                case 8:
+                    _payment = 500;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = 500;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -200;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row5.Cells[0].Value = "ПУ 2";
+                    row5.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row5.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row5);
+                    break;
+                case 9:
+                    _payment = 1500;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = 500;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -200;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row5.Cells[0].Value = "ПУ 2";
+                    row5.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row5.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row5);
+                    break;
+                case 10:
+                    _payment = 2900;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = 500;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -200;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row5.Cells[0].Value = "ПУ 2";
+                    row5.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row5.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row5);
                     break;
                 case 11:
+
+                    _payment = 3000;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = 500;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -800;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row5.Cells[0].Value = "ПУ 2";
+                    row5.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row5.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row5);
                     break;
+                case 12:
+                    _payment = 4000;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = 500;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -800;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row5.Cells[0].Value = "ПУ 2";
+                    row5.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row5.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row5);
+                    break;
+                case 13:
+                    _payment = 1000;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = 500;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -800;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row5.Cells[0].Value = "ПУ 2";
+                    row5.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row5.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row5);
+                    break;
+                case 14:
+                    _payment = 1900;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = -900;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -800;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+
+                    row5 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row5.Cells[0].Value = "ПУ 2";
+                    row5.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    dataGridView1.Rows.Add(row5);
+                    break;
+                case 15:
+                    _payment = 500;
+                    row1 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row1.Cells[0].Value = "ПУ 1";
+                    row1.Cells[1].Value = ServiceEnum.Service1.ToString();
+                    row1.Cells[2].Value = 300;
+                    row1.Cells[4].Value = 1500;
+                    dataGridView1.Rows.Add(row1);
+
+                    row2 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row2.Cells[0].Value = "ПУ 1";
+                    row2.Cells[1].Value = ServiceEnum.Peni.ToString();
+                    row2.Cells[6].Value = 100;
+                    dataGridView1.Rows.Add(row2);
+
+                    row3 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row3.Cells[0].Value = "ПУ 2";
+                    row3.Cells[1].Value = ServiceEnum.Service2.ToString();
+                    row3.Cells[2].Value = -900;
+                    row3.Cells[4].Value = 900;
+                    dataGridView1.Rows.Add(row3);
+
+                    row4 = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row4.Cells[0].Value = "ПУ 2";
+                    row4.Cells[1].Value = ServiceEnum.Service3.ToString();
+                    row4.Cells[2].Value = -800;
+                    row4.Cells[4].Value = 600;
+                    dataGridView1.Rows.Add(row4);
+                    break;
+
             }
             #endregion
+
+            textBox1.Text = _payment.ToString();
         }
     }
 }

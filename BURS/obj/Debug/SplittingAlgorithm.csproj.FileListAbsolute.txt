@@ -92,3 +92,97 @@ C:\Users\smart\Desktop\BURS V3\Барс\BURS\obj\Debug\SplittingAlgorithm.Clarif
 C:\Users\smart\Desktop\BURS V3\Барс\BURS\obj\Debug\SplittingAlgorithm.MainForm.resources
 C:\Users\smart\Desktop\BURS V3\Барс\BURS\obj\Debug\SplittingAlgorithm.Properties.Resources.resources
 C:\Users\smart\Desktop\BURS V3\Барс\BURS\obj\Debug\SplittingAlgorithm.csproj.GenerateResource.Cache
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\SplittingAlgorithm.exe.config
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\obj\Debug\SplittingAlgorithm.exe
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\obj\Debug\SplittingAlgorithm.pdb
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\SplittingAlgorithm.exe
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\SplittingAlgorithm.pdb
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\SourceGrid.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.AttributedModel.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.Convention.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.Hosting.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.Runtime.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.TypedParts.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.Build.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.Build.Tasks.Core.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.Build.Engine.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\SourceGrid.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.AttributedModel.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.Convention.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.Hosting.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.Runtime.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Composition.TypedParts.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\obj\Debug\SplittingAlgorithm.csprojResolveAssemblyReference.cache
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\obj\Debug\SplittingAlgorithm.ClarifyForm.resources
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\obj\Debug\SplittingAlgorithm.MainForm.resources
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\obj\Debug\SplittingAlgorithm.Properties.Resources.resources
+C:\Users\Timerkhan-PC\Desktop\Барс\BURS\obj\Debug\SplittingAlgorithm.csproj.GenerateResource.Cache
+H:\Барс New\BURS\bin\Debug\SplittingAlgorithm.exe.config
+H:\Барс New\BURS\obj\Debug\SplittingAlgorithm.exe
+H:\Барс New\BURS\obj\Debug\SplittingAlgorithm.pdb
+H:\Барс New\BURS\bin\Debug\SplittingAlgorithm.exe
+H:\Барс New\BURS\bin\Debug\SplittingAlgorithm.pdb
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\Барс New\BURS\bin\Debug\SourceGrid.dll
+H:\Барс New\BURS\bin\Debug\System.Collections.Immutable.dll
+H:\Барс New\BURS\bin\Debug\System.Composition.AttributedModel.dll
+H:\Барс New\BURS\bin\Debug\System.Composition.Convention.dll
+H:\Барс New\BURS\bin\Debug\System.Composition.Hosting.dll
+H:\Барс New\BURS\bin\Debug\System.Composition.Runtime.dll
+H:\Барс New\BURS\bin\Debug\System.Composition.TypedParts.dll
+H:\Барс New\BURS\bin\Debug\System.Reflection.Metadata.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.Build.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.Build.Framework.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.Build.Tasks.Core.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.Build.Engine.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.Build.Utilities.Core.dll
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.xml
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.CSharp.Workspaces.xml
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.xml
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.VisualBasic.Workspaces.xml
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.xml
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeAnalysis.Workspaces.Desktop.xml
+H:\Барс New\BURS\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\Барс New\BURS\bin\Debug\SourceGrid.xml
+H:\Барс New\BURS\bin\Debug\System.Collections.Immutable.xml
+H:\Барс New\BURS\bin\Debug\System.Composition.AttributedModel.xml
+H:\Барс New\BURS\bin\Debug\System.Composition.Convention.xml
+H:\Барс New\BURS\bin\Debug\System.Composition.Hosting.xml
+H:\Барс New\BURS\bin\Debug\System.Composition.Runtime.xml
+H:\Барс New\BURS\bin\Debug\System.Composition.TypedParts.xml
+H:\Барс New\BURS\bin\Debug\System.Reflection.Metadata.xml
+H:\Барс New\BURS\obj\Debug\SplittingAlgorithm.csprojResolveAssemblyReference.cache
+H:\Барс New\BURS\obj\Debug\SplittingAlgorithm.ClarifyForm.resources
+H:\Барс New\BURS\obj\Debug\SplittingAlgorithm.MainForm.resources
+H:\Барс New\BURS\obj\Debug\SplittingAlgorithm.Properties.Resources.resources
+H:\Барс New\BURS\obj\Debug\SplittingAlgorithm.csproj.GenerateResource.Cache
