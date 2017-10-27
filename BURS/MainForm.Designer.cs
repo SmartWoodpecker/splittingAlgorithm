@@ -37,11 +37,6 @@
             this.exampleNumber = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +47,12 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,7 +62,7 @@
             // 
             // сalculate
             // 
-            this.сalculate.Location = new System.Drawing.Point(11, 95);
+            this.сalculate.Location = new System.Drawing.Point(11, 127);
             this.сalculate.Margin = new System.Windows.Forms.Padding(2);
             this.сalculate.Name = "сalculate";
             this.сalculate.Size = new System.Drawing.Size(176, 36);
@@ -72,7 +73,7 @@
             // 
             // clarify
             // 
-            this.clarify.Location = new System.Drawing.Point(11, 58);
+            this.clarify.Location = new System.Drawing.Point(11, 90);
             this.clarify.Margin = new System.Windows.Forms.Padding(2);
             this.clarify.Name = "clarify";
             this.clarify.Size = new System.Drawing.Size(176, 33);
@@ -83,6 +84,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label1);
@@ -90,7 +92,7 @@
             this.panel2.Controls.Add(this.clarify);
             this.panel2.Controls.Add(this.сalculate);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 420);
+            this.panel2.Location = new System.Drawing.Point(0, 411);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1047, 172);
             this.panel2.TabIndex = 5;
@@ -169,43 +171,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dataGridView2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 358);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1047, 62);
-            this.panel3.TabIndex = 8;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column11,
-            this.Column13,
-            this.Column14});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1047, 62);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Суммарная задолженность";
-            this.Column11.Name = "Column11";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Суммарные начисления";
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Итог к оплате";
-            this.Column14.Name = "Column14";
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "ПУ";
@@ -271,11 +236,59 @@
             this.Column12.HeaderText = "Недействующий поставщик";
             this.Column12.Name = "Column12";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 358);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1047, 53);
+            this.panel3.TabIndex = 8;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column11,
+            this.Column13,
+            this.Column14});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(1047, 53);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(508, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 25);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Тестовые значения";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Суммарная задолженность";
+            this.Column11.Name = "Column11";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Суммарные начисления";
+            this.Column13.Name = "Column13";
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Итог к оплате";
+            this.Column14.Name = "Column14";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 592);
+            this.ClientSize = new System.Drawing.Size(1047, 583);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -305,9 +318,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -318,6 +328,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
     }
 }
 
