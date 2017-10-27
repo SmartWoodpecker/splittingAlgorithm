@@ -9,13 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace SplittingAlgorithm
 {
     public partial class MainForm : Form
     {
         private List<Provider> _provs;
-
+        Stopwatch myStopwatch = new Stopwatch();
         public int _payment = 0;
         public List<Clarify> clarifys = null; // список уточнений услуг
 
@@ -88,7 +89,11 @@ namespace SplittingAlgorithm
                 }).ToList();
 
             //Вызов алгоритма расщепления оплаты
+            myStopwatch.Start();
             Algorithm1();
+            myStopwatch.Stop();
+            label4.Text=myStopwatch.ElapsedMilliseconds.ToString();
+            MessageBox.Show(myStopwatch.ElapsedMilliseconds.ToString());
             sumFine = _provs.Sum(p => p.Services.Sum(o => o.Fine));
                         //вывод данных
             int counter = 0;
